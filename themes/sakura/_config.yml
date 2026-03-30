@@ -3,7 +3,7 @@ prefixName: さくら荘その
 siteName: Yiza
 # favicon and site master avatar
 favicon: /images/favicon.ico
-avatar: /img/custom/avatar.jpg
+avatar: https://avatars.githubusercontent.com/u/168748049
 url: https://sakura.hojun.cn
 description: Live your life with passion! With some drive!
 cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
@@ -17,11 +17,8 @@ lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progre
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
   归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
-    技术: {path: /categories/技术/, fa: fa-code }, 
-    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
-    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
-    随想: {path: /categories/随想/, fa: fa-commenting-o },
-    转载: {path: /categories/转载/, fa: fa-book }
+    当ProBot准备跑路: {path: /categories/当ProBot准备跑路/, fa: fa-rocket },
+    文章: {path: /articles/, fa: fa-file-text-o }
   } }
   清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
     书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
@@ -31,7 +28,6 @@ menus:
   } }
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
   友人帐: { path: /links/, fa: fa-link faa-shake }
-  赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
     我？: {path: /about/, fa: fa-meetup}, 
     主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
@@ -62,8 +58,7 @@ bgclass: filter-dot
 # startdash url, title, desc img
 startdash: 
   - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
-  - {url: http://space.bilibili.com/271849279, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
-  - {url: /, title: hojun的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+  - {url: https://space.bilibili.com/2048292030, title: Bilibili, desc: 我的B站主页, img: /img/startdash/bilibili.jpg}
 
 
 
@@ -72,19 +67,11 @@ siteBuildingTime: 07/17/2018
 
 #social  url, img PC端配置
 social:
-  github: {url: http://github.com/honjun, img: /img/social/github.png}
-  sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
-  wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
-  zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}
-  email: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/email.svg}
-  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
-  wechat2: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  github: {url: https://www.github.com/Yizakl, img: /img/social/github.png}
 
 #social  url, img 移动端配置
 msocial:
-  github: {url: http://github.com/honjun, fa: fa-github, color: 333}
-  weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
-  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+  github: {url: https://www.github.com/Yizakl, fa: fa-github, color: 333}
 
 donate:
   paypal: https://www.paypal.me/hojuncn
@@ -111,7 +98,7 @@ aplayer:
   mutex: true
 
 # Valine
-valine: true
+valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 
@@ -127,3 +114,39 @@ waline:
   placeholder: 祝开开心心！ # Comment Box placeholder
   requiredFields: [ 'nick','mail' ] #设置必填项
   background: https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif #输入框提示动画
+
+# Giscus 评论系统配置
+# 基于 GitHub Discussions 的评论系统
+giscus:
+  # 是否启用 Giscus 评论系统
+  enable: true
+  # 是否显示加载动画
+  loading: true
+  # GitHub 仓库，格式为 username/repo-name
+  repo: Yizakl/blog
+  # GitHub 仓库的唯一ID
+  repo_id: R_kgDOR0tCzQ
+  # GitHub Discussions 分类名称
+  category: General
+  # Discussions 分类的唯一 ID
+  category_id: DIC_kwDOR0tCzc4C5nix
+  # 指定 GitHub discussion 的匹配规则
+  mapping: pathname
+  # 当 mapping 为 specific 时的特定术语
+  term: 
+  # 是否启用严格的标题匹配
+  strict: 0
+  # 是否启用主帖子上的反应
+  reactions_enabled: 1
+  # 是否输出 discussion 的元数据
+  emit_metadata: 0
+  # 亮色主题
+  theme: preferred_color_scheme
+  # 暗色主题
+  dark: dark
+  # 评论区的语言
+  lang: zh-CN
+  # 评论输入框的位置
+  input_position: bottom
+  # 懒加载评论
+  data_loading: lazy

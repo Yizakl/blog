@@ -110,6 +110,23 @@
         <% } %>
       </section>
       <%- partial('_partial/comment') %>
+
+    <!-- Giscus 评论系统 -->
+    <script src="https://giscus.app/client.js"
+            data-repo="Yizakl/blog"
+            data-repo-id="R_kgDOR0tCzQ"
+            data-category="General"
+            data-category-id="DIC_kwDOR0tCzc4C5nix"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+    </script>
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="<%- post.authorLink %>" class="profile gravatar"><img src="<%- post.avatar%>" itemprop="image" alt="<%- post.author %>" height="70" width="70"></a>

@@ -5,7 +5,7 @@
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="<%- theme.url%>">
-          <img src="<%- (theme.cdn || '') + theme.avatar %>">
+          <img src="https://avatars.githubusercontent.com/u/168748049">
         </a>
       </div>
       <div class="header-info">
@@ -16,21 +16,23 @@
           </li>
           <% if (theme.social) {%>
             <% for (i in theme.social) {%>
-              <% if (theme.social[i].qrcode) {%>
-                <li class="wechat">
-                  <a href="<%= theme.social[i].url%>">
-                    <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
-                  </a>
-                  <div class="wechatInner">
-                    <img src="<%- (theme.cdn || '') + theme.social[i].qrcode%>">
-                  </div>
-                </li>
-              <% } else { %>
-                <li>
-                  <a href="<%= theme.social[i].url%>" target="_blank" class="social-github" title="<%- i %>">
-                    <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
-                  </a>
-                </li>
+              <% if (i === 'github') { %>
+                <% if (theme.social[i].qrcode) {%>
+                  <li class="wechat">
+                    <a href="<%= theme.social[i].url%>">
+                      <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
+                    </a>
+                    <div class="wechatInner">
+                      <img src="<%- (theme.cdn || '') + theme.social[i].qrcode%>">
+                    </div>
+                  </li>
+                <% } else { %>
+                  <li>
+                    <a href="<%= theme.social[i].url%>" target="_blank" class="social-github" title="<%- i %>">
+                      <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
+                    </a>
+                  </li>
+                <% } %>
               <% } %>
             <% } %>
           <% } %>

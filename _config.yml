@@ -102,3 +102,47 @@ theme: sakura
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Server
+## Docs: https://hexo.io/docs/server.html
+server:
+  port: 4001
+  compress: true
+  header:
+    Access-Control-Allow-Origin: '*'
+
+# Giscus 评论系统配置
+# 基于 GitHub Discussions 的评论系统
+giscus:
+  # 是否启用 Giscus 评论系统
+  enable: true
+  # 是否显示加载动画
+  loading: true
+  # GitHub 仓库，格式为 username/repo-name
+  repo: Yizakl/blog
+  # GitHub 仓库的唯一ID
+  repo_id: R_kgDOR0tCzQ
+  # GitHub Discussions 分类名称
+  category: General
+  # Discussions 分类的唯一 ID
+  category_id: DIC_kwDOR0tCzc4C5nix
+  # 指定 GitHub discussion 的匹配规则
+  mapping: pathname
+  # 当 mapping 为 specific 时的特定术语
+  term: 
+  # 是否启用严格的标题匹配
+  strict: 0
+  # 是否启用主帖子上的反应
+  reactions_enabled: 1
+  # 是否输出 discussion 的元数据
+  emit_metadata: 0
+  # 亮色主题
+  theme: preferred_color_scheme
+  # 暗色主题
+  dark: dark
+  # 评论区的语言
+  lang: zh-CN
+  # 评论输入框的位置
+  input_position: bottom
+  # 懒加载评论
+  data_loading: lazy
