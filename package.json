@@ -12,7 +12,7 @@
     "version": "8.1.1"
   },
   "dependencies": {
-    "axios": "^1.14.0",
+    "axios": "^1.14.1",
     "hexo": "^8.0.0",
     "hexo-comments-giscus": "^1.0.3",
     "hexo-generator-archive": "^2.0.0",
