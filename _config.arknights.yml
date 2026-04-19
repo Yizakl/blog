@@ -94,7 +94,7 @@ search:
 # 背景音乐
 bgm:
   enable: true
-  autoplay: true
+  autoplay: false
   loop: true
   src: /audio/bgm.mp3
 
